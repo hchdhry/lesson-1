@@ -1,13 +1,11 @@
-for i in range(15):
-    if i % 3 == 0:
-        print("fizz")   
-    elif i % 5 == 0:
-        print("buzz")
-    else:
-        print(i)
-###################################################
-
-def addTwonumber(num1,num2):
-    return num1+num2
-
-print(addTwonumber(2,322))
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        # Create a new string containing only alphanumeric characters
+        newstring = ''.join(char.lower() for char in s if char.isalnum())
+        
+        # Check if the new string is equal to its reverse
+        return newstring == newstring[::-1]
